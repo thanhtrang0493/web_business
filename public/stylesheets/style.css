@@ -6,3 +6,12 @@ body {
 a {
   color: #00B7FF;
 }
+
+div {
+  color: bisque;
+}
+
+.middleScreen{
+  text-align:center;
+  margin-top:10%;
+}
