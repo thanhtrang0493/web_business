@@ -5,6 +5,8 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var bodyParser = require('body-parser');
 var engines = require('consolidate');
+var firebase = require("firebase");
+var admin = require("firebase-admin");
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
