@@ -209,6 +209,13 @@ td {border-right:1px solid #fff;}
   background: #867701 none repeat scroll 0 0;
   color: #fff;
 }
+.top-nav li a.noTransition {
+  -moz-transition: none;
+  -webkit-transition: none;
+  -o-transition: color 0 ease-in;
+  transition: none;
+}
+
 .background-dark-hightlight .top-nav .active-item > a, .background-dark-hightlight .top-nav li a:hover, .background-dark-hightlight .aside-nav li a:hover, 
 .background-dark-hightlight .aside-nav > ul > li.active-item > a:link, .background-dark-hightlight .aside-nav > ul > li.active-item > a:visited,
 .primary-color-dark .background-primary-hightlight .top-nav .active-item > a, .primary-color-dark .background-primary-hightlight .top-nav li a:hover, .primary-color-dark .background-primary-hightlight .aside-nav li a:hover, 
@@ -1276,6 +1283,7 @@ p.form-success {
       padding: 1em;
       text-align: center;
     }
+
     aside {
         border: none;
         padding: 0;

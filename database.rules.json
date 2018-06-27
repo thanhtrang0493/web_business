@@ -2,6 +2,9 @@
   "rules": {
     ".auth ":false,
     ".read": true,
-    ".write": true
+    ".write": true,
+    "origin": ["*"],
+    "method": ["GET"],
+    "maxAgeSeconds": 3600
   }
 }
