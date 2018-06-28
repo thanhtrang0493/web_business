@@ -1,95 +1,6 @@
-<!DOCTYPE html>
-<html lang="en-US">
-        <head>
-                <meta charset="UTF-8">
-                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-                <title>Prospera Free - New Amazing HTML5 Template</title>
-                <link rel="stylesheet" href="/css/components.css">
-                <link rel="stylesheet" href="/css/icons.css">
-                <link rel="stylesheet" href="/css/responsee.css">
-                <link rel="stylesheet" href="/owl-carousel/owl.carousel.css">
-                <link rel="stylesheet" href="/owl-carousel/owl.theme.css">
-                <!-- CUSTOM STYLE -->
-                <link rel="stylesheet" href="/css/template-style.css">
-                <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-                <script type="text/javascript" src="/js/jquery-1.8.3.min.js"></script>
-                <script type="text/javascript" src="/js/jquery-ui.min.js"></script>    
-                <script type="text/javascript" src="/js/firebaseVoting.js"></script>    
-                
-                <!-- fire base -->
-                <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase.js"></script>
-                <script>
-                  // Initialize Firebase
-                  var config = {
-                    apiKey: 'AIzaSyBbd_TSRKcfGNiTgdP_IlZkLADLOmd5rgY',
-                    authDomain: 'web-business-c72bc.firebaseapp.com',
-                    databaseURL: 'https://web-business-c72bc.firebaseio.com',
-                    projectId: 'web-business-c72bc',
-                    storageBucket: '',
-                    messagingSenderId: '810168062417'
-                  }
-                  firebase.initializeApp(config)
-                </script>
-              </head>  
-  
-  <body class="size-1140">
-    <!-- HEADER -->
-    <header role="banner" class="header"> 
-      <!-- fanpage facebook    -->
-        <div id="fb-root"></div>
-        <script>(function(d, s, id) {
-          var js, fjs = d.getElementsByTagName(s)[0];
-          if (d.getElementById(id)) return;
-          js = d.createElement(s); js.id = id;
-          js.src = 'https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v3.0';
-          fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));</script>
+<% include ../layout/header.ejs %>
+<!-- Header End -->
 
-      <!-- PREMIUM FEATURES BUTTON -->
-  	  <!-- <a target="_blank" class="hide-s scroll-top"><img src="img/premium-features.png" alt=""></a> -->
-    
-      <!-- Top Navigation -->
-      <nav class="background-yellow background-primary-hightlight">
-        <div class="line">
-          <div class="top-nav s-12 l-2 middle">
-              <!-- <ul class="right chevron no-animate">
-                  <li><a href="index.html" class="logo"><img src="img/logo-free.png" alt=""></a></li>
-              </ul> -->
-            <div class="right chevron inner">
-              <a href="index.html" class="logo"><img src="img/logo-free.png" alt=""></a>
-            </div>
-          </div>
-          <div class="top-nav s-12 l-10">
-            <p class="nav-text"></p>
-            <ul class="right chevron">
-              <li><a href="index.html">Trang Chủ</a></li>
-              <li><a href="products.html">Áo Sơ Mi</a>
-                <ul>
-                  <li><a>Nam</a></li>
-                  <li><a>Nữ</a></li>
-                </ul>
-              </li>
-              <li><a>Áo Thun</a>
-                <ul>
-                  <li><a>Nam</a>
-                  </li>
-                  <li><a>Nữ</a></li>
-                </ul>
-              </li>
-              <li><a href="about.html">Đầm</a></li>
-              <li><a href="gallery.html">Áo Khoác</a>
-                <ul>
-                  <li><a>Nam</a></li>
-                  <li><a>Nữ</a></li>
-                </ul>
-              </li>
-              <li><a href="contact.html">Liên Hệ</a></li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </header>
-    
     <!-- MAIN -->
     <main role="main" class="white">
       <!-- Main Carousel -->
@@ -123,6 +34,23 @@
               </div>
             </div>
           </div>  
+        </div>
+      </section>
+
+      <div>
+          <ul class=" chevron">
+              <li><a href="/details" class="noTransition">Trang Chủ</a></li>
+              </ul>
+      </div>
+      <!-- Section 1 -->
+      <section class="section background-white"> 
+        <div class="line">
+            <div class="form-field">
+                <label for="photo">Photo</label>
+                <input class="input" id="photo" name="photo" type="file" />
+              </div>
+          <!-- <input type="file" name="file" id="update"/> -->
+          <button onclick="uploadFile()" id="uploadButton" class="button-register-receiver-news button border-radius text-white" type="button">ĐĂNG KÝ</button>
         </div>
       </section>
       
@@ -311,113 +239,6 @@
       
     </main>
     
-    <!-- FOOTER -->
-    <footer>
-      <!-- Social -->
-      <div class="padding text-center ">
-        <a href="/"><i class="icon-facebook_circle icon2x"></i></a> 
-        <a href="/"><i class="icon-twitter_circle icon2x"></i></a>
-        <a href="/"><i class="icon-google_plus_circle icon2x "></i></a>
-        <a href="/"><i class="icon-instagram_circle icon2x "></i></a>                                                                        
-      </div>
-      
-      <!-- Main Footer -->
-      <section class="section background-black">
-        <div class="line">
-          <div class="margin background-black">
-            <!-- Collumn 1 -->
-            <div class="s-12 m-12 l-4 margin-m-bottom-2x">
-              <img src="img/logo-free.png" alt="">
-
-              <div class="line">
-                <h4 class="text-uppercase text-strong margin-top-30 white">Về Chúng Tôi</h4>
-                <div class="margin">
-                  <div class="s-12 m-12 l-4 margin-m-bottom">
-                    <a class="image-hover-zoom" href="/"><img src="img/img3.jpg" alt=""></a>
-                  </div>
-                  <div class="s-12 m-12 l-8 margin-m-bottom">
-                    <p>Thời Trang Elmer mang đến cho bạn sự thoải mái, mẫu mã đa dạng, giá cả hợp lý.</p>
-                    <a class="text-more-info text-primary-hover" href="/">Xem thêm</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            <!-- Collumn 2 -->
-            <div class="s-12 m-12 l-4 margin-m-bottom-2x">
-              <h4 class="text-uppercase text-strong white">Liên Hệ Chúng Tôi</h4>
-              <div class="line">
-                <div class="s-1 m-1 l-1 text-center">
-                  <i class="icon-placepin text-primary text-size-12"></i>
-                </div>
-                <div class="s-11 m-11 l-11 margin-bottom-10">
-                  <p><b>Adress 1:</b> Thanh Đa, Bình Thạnh, Hồ Chí Minh</p>
-                </div>
-              </div>
-              <div class="line">
-                  <div class="s-1 m-1 l-1 text-center">
-                    <i class="icon-placepin text-primary text-size-12"></i>
-                  </div>
-                  <div class="s-11 m-11 l-11 margin-bottom-10">
-                    <p><b>Adress 2:</b> Phước Tân, Xuyên Mộc, Bà Rịa Vũng Tàu</p>
-                  </div>
-                </div>
-              <div class="line">
-                <div class="s-1 m-1 l-1 text-center">
-                  <i class="icon-mail text-primary text-size-12"></i>
-                </div>
-                <div class="s-11 m-11 l-11 margin-bottom-10">
-                  <p><a href="/" class="text-primary-hover"><b>E-mail:</b> thoitrangkeva@gmail.com</a></p>
-                </div>
-              </div>
-              <div class="line">
-                <div class="s-1 m-1 l-1 text-center">
-                  <i class="icon-smartphone text-primary text-size-12"></i>
-                </div>
-                <div class="s-11 m-11 l-11 margin-bottom-10">
-                  <p><b>Phone:</b> 0961 866 691</p>
-                </div>
-              </div>
-              <div class="line">
-                <div class="s-1 m-1 l-1 text-center">
-                  <i class="icon-facebook text-primary text-size-12"></i>
-                </div>
-                <div class="s-11 m-11 l-11">
-                  <p><a href="/" class="text-primary-hover"><b>Facebook</b></a></p>
-                </div>
-              </div>
-            </div>
-            
-            <!-- Collumn 3 -->
-            <div class="s-12 m-12 l-4">
-              <h4 class="text-uppercase text-strong white">FACEBOOK FANPAGE</h4>
-              <form class="customform text-white">
-                <div class="s-12">
-                    <!-- https://developers.facebook.com/docs/plugins/page-plugin -->
-                    <div class="fb-page" data-href="https://www.facebook.com/produce48vn/" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/produce48vn/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/produce48vn/">PRODUCE48vn - Produce 48 Vietnamese Fanpage</a></blockquote></div>
-                  </div> 
-              </form>
-            </div>
-          </div>
-        </div>
-      </section>
-      <hr class="break margin-top-bottom-0" style="border-color: rgba(0, 38, 51, 0.80);">
-      
-      <!-- Bottom Footer -->
-      <section class="padding-08x background-black">
-        <div class="line">
-          <div class="s-12 l-6">
-            <p class="text-size-12">© 2018, Thời Trang Elmer</p>
-            <!-- <p class="text-size-12">All images have been purchased from Bigstock. Do not use the images in your website.</p> -->
-          </div>
-          <div class="s-12 l-6">
-            <a class="right text-size-12" title="Responsee - lightweight responsive framework">Tạo bởi Trang Thanh</a>
-          </div>
-        </div>
-      </section>
-    </footer> 
-    <script type="text/javascript" src="js/responsee.js"></script>
-    <script type="text/javascript" src="owl-carousel/owl.carousel.js"></script>
-    <script type="text/javascript" src="js/template-scripts.js"></script>   
-   </body>
-</html>
+    
+<!-- Footer -->
+<% include ../layout/footer.ejs %>

@@ -10,6 +10,7 @@ var admin = require("firebase-admin");
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+var detailsRouter = require('./routes/details');
 
 var app = express();
 
@@ -19,6 +20,8 @@ app.set('view engine', 'html');
 
 app.engine('html', engines.mustache);
 // app.set('view engine', 'html');
+
+app.set('view engine', 'ejs');
 
 app.set('layout', path.join(__dirname, 'views/layout'));
 app.set('css', path.join(__dirname, 'views/css'));
@@ -30,6 +33,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use('/details',detailsRouter);
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
