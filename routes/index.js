@@ -5,7 +5,8 @@ var admin = require("firebase-admin");
 var ProductController = require('../controllers/product');
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('layout/index.ejs',{}); 
+  // res.render('layout/index.ejs',{}); 
+  res.render('layout/multi_svg.ejs',{}); 
   insertData();
 });
 
