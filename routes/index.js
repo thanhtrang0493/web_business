@@ -3,11 +3,22 @@ var Product = require('../model/Product.js');
 var router = express.Router();
 var admin = require("firebase-admin");
 var ProductController = require('../controllers/product');
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  // res.render('layout/index.ejs',{}); 
-  res.render('layout/multi_svg.ejs',{}); 
-  insertData();
+  res.render('layout/index.ejs',{}); 
+  // res.render('layout/multi_svg.ejs',{}); 
+  // insertData();
+});
+
+/* GET details page. */
+router.get('/details', function (req, res) {
+  res.render('layout/details.ejs',{});
+});
+
+/* GET try clothes page. */
+router.get('/try-clothes', function (req, res) {
+  res.render('layout/try_clothes.ejs',{});
 });
 
 function insertData(){
