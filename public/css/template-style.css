@@ -327,9 +327,8 @@ video {
   text-align: left;
 }
 nav {
-  border-bottom: 4px solid rgba(0, 0, 0, 0.05);
   border-top: 1px solid rgba(0, 0, 0, 0.05);
-  padding: 0.3rem 0;
+  padding: 0.5rem 0;
   position: relative;
   z-index: 2;
 }  
@@ -2125,4 +2124,104 @@ p.form-success {
 
 .text-color{
   color: #002633;
+}
+
+
+/* try clothes css */
+.body-try {
+  background: #616161;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.colour {
+  width: 30px;
+  height: 30px;
+  background: white;
+  border-radius: 9999px;
+  cursor: pointer;
+}
+
+.colour::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  transform: scale(1);
+  background: rgba(255,255,255,0.3);
+  z-index: -1;   
+  border-radius: 9999px;
+  transform: all 0.35s;
+}
+
+.colour.isActive::before {
+  transform: scale(1.4);
+}
+
+.customiser {
+  background: rgba(0,0,0,0.4);
+}
+
+.logo-try {
+  width: 100%;
+}
+
+.layer-wrap {
+  position: relative;
+}
+
+.layer-wrap img {
+  max-height: 85vh;    
+}
+
+.layer-wrap .layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.footer-try {
+  background: #383737;
+}
+
+.footer-try p {
+  color: #616161;
+}
+
+.footer-try a {
+  color: white;
+  text-decoration: none;
+}
+
+.pointer {cursor: pointer;}
+
+@media (max-width: 35em) {
+  .container-cart {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    /* optional */
+    -webkit-box-align: start;
+    -moz-box-align: start;
+    -ms-flex-align: start;
+    -webkit-align-items: flex-start;
+    align-items: flex-start;
+  }
+
+  .container-cart .first {
+    -webkit-box-ordinal-group: 2;
+    -moz-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    -webkit-order: 1;
+    order: 1;
+  }
 }
